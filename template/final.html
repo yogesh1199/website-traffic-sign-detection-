@@ -1,0 +1,128 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>traffic sign detection</title>
+
+	<link rel="stylesheet" href="fontawesome-free-5.2.0-web/css/font-awesome.min.css">
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="wow-master/dist/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+<style type="text/css">
+	body{
+		background-image: url({{STATIC_URL}}media/t3.jpg);
+	filter: brightness(90%);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+
+    .big{ width: 3em; height: 3em; }
+</style>		
+</head>
+<body>
+	<div class="container" style="background-color: slategrey;filter: opacity(82%);">
+<center><h1 style="font-family:; color: gold; text-align: center; font-size: 50px; text-shadow: 5px 2px 4px blue">TRAFFIC SIGN DETECTION</h1>
+
+</center>
+<marquee scrollamount="34" direction="top"><img src="{{STATIC_URL}}media/noleft.jpg" style="height: 200px;width:20%">
+<img src="{{STATIC_URL}}media/noparking.jpg"style="height: 200px;width:20%">
+<img src="{{STATIC_URL}}media/notruck.jpg"style="height: 200px;width:20%">
+<img src="{{STATIC_URL}}media/uturn.jpg"style="height: 200px;width:20%">
+<img src="{{STATIC_URL}}media/oneway.jpg"style="height: 200px;width:20%">
+<img src="{{STATIC_URL}}media/pedestrain.jpg"style="height: 200px;width:20%">
+<img src="{{STATIC_URL}}media/donotenter.jpg"style="height: 200px;width:20%"></marquee>
+<br>
+<br>
+<div class="container-fluied" style="background-color: white;margin: -15px">
+	<div class="wow fadeIn" style="animation-delay: 1s"><center><h1 style="color:black">
+<script type="text/javascript">
+  var quotes =[]
+     quotes[0]="Alert today – Alive tomorrow."
+     quotes[1]="Normal speed meets every need."
+quotes[2]="Anyone driving slower than you is an idiot, and anyone going faster than you is a maniac."
+quotes[3]="Stop accidents before they stop you."
+quotes[4]="Road sense is the offspring of courtesy and the parent of safety"
+quotes[5]="Life don’t have Reset button. Drive safe."
+
+quotes[6]="Speed thrills but kills!"
+quotes[7]="While driving avoid phone or else your family will be left alone"
+quotes[8]="Safety starts with “S”, begins with “You”"
+quotes[9]="Speed has 5 letters so has death… Slow has 4 letters so has life."
+  var random_number = Math.round(Math.random()*(quotes.length));
+  document.write(quotes[random_number]);
+
+
+</script></h1>
+<br>
+<center><h1>CHOOSE ONE SIGN AT A TIME TO DETECT</h1></center>
+</div>
+<br>
+
+<form action="/school",method="get">
+	<table class="table">
+		<tr>
+			<th> S NO.</th>
+			<th> TRAFFIC SIGN</th>
+			<th> DISCRIPTION</th>
+			<th> DETECTION</th>
+		</tr>
+	    <tr>
+	    	<td><h3>1</h3></td>
+	    	<td><img src="{{STATIC_URL}}media/school.png" height="100px" width="20%"></td>
+	    	<td><h3><b>SCHOOL AHEAD: this traffic signs show that school is in the way so slow down a vehicle</b></h3></td>
+	    	<td><input type='radio' name='school' value='school' class="big" ><b>SCHOOL AHEAD</b></td>
+	    </tr>
+	    <tr>
+	    	<td><h3>2</h3></td>
+	    	<td><img src="{{STATIC_URL}}media/give.png" height="100px" width="20%"></td>
+	    	<td><h3><b>Give way: this traffic signs show that give way to another vehicle</b></h3></td>
+	    	<td><input type='radio' name='give' value='give' class="big"><b>GIVE WAY</b></td>
+	    </tr>
+        <tr>
+	    	<td><h3>3</h3></td>
+	    	<td><img src="{{STATIC_URL}}media/uturn.jpg" height="100px" width="20%"></td>
+	    	<td><h3><b>U TURN PROHIBITED: this traffic signs show that U TURN is not allow there.</b></h3></td>
+	    	<td><input type='radio' name='turn' value='turn' class="big"><b>U TURN PROHIBITED</b></td>
+	    </tr>
+	    <tr>
+	    	<td><h3>4</h3></td>
+	    	<td><img src="{{STATIC_URL}}media/2.png" height="100px" width="20%"></td>
+	    	<td><h3><b>STOP SIGN: this traffic sign indicates a driver to stop a vehicle</b></h3></td>
+	    	<td><input type='radio' name='stop' value='stop' class="big"><b>STOP</b></td>
+	    </tr>
+	    <tr>
+	    	<td><h3>5</h3></td>
+	    	<td><img src="{{STATIC_URL}}media/rail.png" height="100px" width="20%"></td>
+	    	<td><h3><b>RAILWAY TRACK AHEAD: this signs indicates that railway track is ahead</b></h3></td>
+	    	<td><input type='radio' name='rail' value='rail' class="big"><b>RAILWAY TRACK AHEAD</b></td>
+	    </tr>
+	    <tr>
+	    	<td><h3>6</h3></td>
+	    	<td><img src="{{STATIC_URL}}media/one way.jpg" height="100px" width="20%"></td>
+	    	<td><h3><b> ONE WAY: this sign indicates that vehicle should move in one direction</b></h3></td>
+	    	<td><input type='radio' name='one' value='one' class="big"><b>ONE WAY</b></td>
+	    </tr>
+	    
+	    
+	    <tr>
+	    	<td><h3>7</h3></td>
+	    	<td><img src="{{STATIC_URL}}media/pedestrian.jpg" height="100px" width="20%"></td>
+	    	<td><h3><b>PEDESTRIAN AHEAD: this sign indicates that pedestrian way in the way</b></h3></td>
+	    	<td><input type='radio' name='ped' value='ped' class="big"><b>PEDESTRIAN WAY</b></td>
+	    </tr>
+	    
+	  </table>
+	  <button type="submit" class="btn btn-danger btn-lg btn-block">GET SET GO</button>
+	</form>
+
+</div>
+</div>
+
+</body>
+</html>
